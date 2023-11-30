@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .Rahul{
+            margin: 0 auto;
+            /* width: 200px;
+            height: 200px; */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="Rahul">
+        <label for="Name" class="d1">Name</label>
+        <input type="space" class="d2">
+        <br>
+        <label for="Name">full Name</label>
+        <input type="space">
+
+
+        <div class="box">
+            <button>+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>/</button>
+        </div>
+        <label for="Name2"></label>
+        <input type="space">
+
+   
+</body>
+</html>
