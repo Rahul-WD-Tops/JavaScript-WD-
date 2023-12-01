@@ -1,51 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Converter in JS</title>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .army{
-        text-align: center;
-        padding: 20px;
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Converter in Js</title>
 
-    }
-    #army2{
-        height: 100px;
+    <style>
+      .container {
         width: 500px;
-    }
-    .army button{
+        height: 500px;
+        margin: 0 auto;
+      }
+      #converter {
+        width: 500px;
         height: 50px;
-        width: 120px;
-    
-    }
-</style>
-    
-</head>
-<body>
-    <div class="army">
-    
-        <input id="army2" type="Text Converter" value="TextConverter"><br>
-        <button onclick="Upper case">Upper case</button>
-        <button onclick="lower case">lower case</button><br>
-        <button onclick="Clear">Clear</button>
-        <button onclick="Trim">Trim</button><br>
-        <button onclick="Word count">Word count</button>
-        <button onclick="Space Remove">Space Remove</button><br>
-        <button onclick="Character count">Character count</button>
-        <button onclick="Find and Replace">Find and Replace</button>
-    </div>
+        
+      
+      }
+      button {
+        width: 200px;
+        height: 50px;
+      
+      }
+      .army {
+        height: 3px;
+        margin-bottom: 50px;
+      }
+      .army01{
+        text-align: center;
+        padding-top: 30px;
+      }
+      .army02 {
+        text-align: center;
+        padding-top: 30px;
+      }
+      .army03 {
+        text-align: center;
+        padding-top: 30px;
+      }
+      .army04 {
+        text-align: center;
+        padding-top: 30px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <input
+          type="text"
+          value=""
+          id="converter"
+          placeholder="Text-Converter"
+        />
+      </div>
 
+     
+      
+
+      <div class="container">
+        <div class="army">
+          <button id="box" onclick="UpperCase()">Upper Case</button>
+          <button id="box" onclick="LowerCase()">Lower Case</button>
+        </div>
+        <div class="army01">
+          <button id="box" onclick="Clear()">Clear</button>
+          <button id="box" onclick="Trim()">Trim</button>
+        </div>
+        <div class="army02">
+          <button id="box" onclick="characterCount()">
+            Character Count
+          </button>
+          <button id="box" onclick="wordsCount()">World Count</button>
+        </div>
+        <div class="army03">
+          <button id="box" onclick="removeSpace()">Space Remove</button>
+          <button id="box" onclick="findAndReplace()">Find & Replace</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    
     <script>
-    
-    
+      function UpperCase() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.toUpperCase("");
+      }
+
+      function LowerCase() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.toLowerCase("");
+      }
+
+ function Clear() {
+        document.getElementById("converter").value = "";
+      }
+
+      function Trim() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.trim("");
+      }
+      function SpaceRemove() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.Spaceremove("");
+      }
+
+      function characterCount() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.length;
+      }
+
+      function wordsCount() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.split(" ").length;
+      }
+
+      function removeSpace() {
+        let a = document.getElementById("converter").value;
+        document.getElementById("converter").value = a.replaceAll(" ", "");
+      }
+
+      function findAndReplace() {
+        let a = document.getElementById("converter").value.toLowerCase();
+        let findStr = document.getElementById("find-input").value.toLowerCase();
+        let replaceStr = document.getElementById("replace-input").value;
+        document.getElementById("converter").value = a.replaceAll(
+          findStr,
+          replaceStr
+        );
+      }
     </script>
-    
-</body>
+  </body>
 </html>

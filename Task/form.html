@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contanor{
+            background-color: yellow;
+        height: 400px;
+        width: 400px;
+        border: radius 10px;
+        margin: 25px;
+        border: 1px solid black;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contanor">
+    <h1>*form variable*</h1>
+
+
+    <div onclick="username()">username<input id="army1" type="username"></div><br>
+
+    <div onclick="E-mail id()">E-mail id<input id="army2" type="email id"></div><br>
+
+    <div onclick="password()">password<input id="army3" type="password"></div><br>
+
+    <div onclick="phone-no()">phone-no<input id="army4" type="phone-no"></div><br>
+    
+
+    <button onclick="Submit()">Submit</button>
+    <button onclick="reset()">reset</button>
+
+</div>
+
+
+
+<script>
+    function Submit() {
+        let a = document.getElementById("army").value
+        document.getElementById("army").value = a.Submit;
+    }
+
+
+    function reset() {
+        let a = document.getElementById("army").value
+        document.getElementById("army").value = a.reset;
+    }
+
+
+</script>
+    
+</body>
+</html>
