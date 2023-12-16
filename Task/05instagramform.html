@@ -44,7 +44,7 @@
             /* justify-content: center; */
             border: 1px solid black;
             width: 40%;
-            height: 296px;
+            height: 302px;
 
         }
 
@@ -73,8 +73,8 @@
             color: blue;
         }
 
-        .singhup {
-            color: aqua;
+        .shows1 {
+            display: flex;
         }
     </style>
 </head>
@@ -86,10 +86,22 @@
             <img src="../../website/IMAGE/insta logo.png" alt="">
 
         </div>
+        <div class="uname">
+            <p id="unamep"></p>
+            <input id="phone-number" oninput="dtu()" class="inputs" type="text"
+                placeholder="Phone number, username, or email">
 
-        <input type="text" placeholder="phone number, username or email" class="box1"> <br>
-        <input type="text" placeholder="password" class="box1"><br>
-        <button class="box2">Log in</button>
+            <div class="pass">
+                <div class="shows1">
+                    <p class="first" id="first"></p>
+                    <input id="pass-id" class="inputs" oninput="dtu2()" type="password" placeholder="Password"
+                        onclick="handlevalidation()">
+                    <p id="show" onclick="show()">Show</p>
+                </div>
+            </div>
+        </div>
+
+
         <p>_____________OR______________</p>
         <div class="fouji">
             <i class="fa-brands fa-facebook"></i>
@@ -113,7 +125,25 @@
 
     <script>
 
+        function handlevalidation() {
+            document.getElementById("show").style.display = "block"
+
+        }
+        function show() {
+            let userp = document.getElementById("pass-id")
+
+            if (userp.type === "password") {
+                userp.type = "text"
+                document.getElementById("show").innerText = "hide"
+
+            }
+            else {
+                userp.type = "password";
+                document.getElementById("show").innerText = "show"
+            }
+        }
     </script>
+
 
 
 </body>
