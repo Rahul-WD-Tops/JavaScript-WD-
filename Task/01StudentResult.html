@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student result in JS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student result in JS</title>
 
-    
+
 </head>
+
 <body>
-    <h1>Student result</h1>
-        <input id="Mask" type="text" value="">
-        <br>
-        <button onclick="Show()">show  </button>
+  <h1>Student result</h1>
+  <input id="Mask" type="text" value="">
+  <br>
+  <button onclick="Show()">show </button>
 
 
-        <script>
-          function Show(){let result=document.getElementById("Mask").value;
-          if (result>33) {
-            alert("pass")
-            
-          } else {
-            alert("fail")
-            
-          }
+  <script>
+    function Show() {
+      let result = document.getElementById("Mask").value;
+      if (result > 33) {
+        alert("pass")
+
+      } else {
+        alert("fail")
+
+      }
 
 
-          }
-            
+    }
 
-        </script>
 
-    
+  </script>
+
+
 </body>
+
 </html>
