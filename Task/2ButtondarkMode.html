@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark And Light mode</title>
+</head>
+<style>
+    .Dark1 {
+        text-align: center;
+    }
+</style>
+
+<body id="Dark1">
+    <div>
+        <button onclick="mode()">DarkMode</button>
+
+        <h1>Dark Mode</h1>
+        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum assumenda dolores iure incidunt deserunt
+            officiis
+            exercitationem quisquam atque, facere veniam distinctio voluptatibus repellendus rem libero, temporibus
+            aliquam
+            molestiae repellat. Natus?</P>
+    </div>
+    <script>
+        function mode() {
+            document.getElementById("Dark1").style.backgroundColor !== "black"
+            document.getElementById("Dark1").style.backgroundColor = "black";
+            document.getElementById("Dark1").style.color = "white";
+            document.getElementById("Dark1").style.backgroundColor = "white"
+            document.getElementById("Dark1").style.color = "black";
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
