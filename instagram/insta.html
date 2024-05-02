@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="insta.css">
+
+
+</head>
+
+<body>
+    <section>
+        <div class="insta-wrapper">
+            <div class="instagram-image"></div>
+
+            <div class="uname">
+                <p id="unamep"></p>
+                <label for="">Phone number, username, or email</label>
+                <input id="phone-number" oninput="dtu()" class="inputs" type="text">
+            </div>
+            <div class="pass">
+                <P class="first" id="first"></p>
+                <input id="pass-id" class="inputs" oninput="dtu2()" type="password" placeholder="Password"
+                    onclick="handlevalidation()">
+                <p id="show" onclick="show()">Show</p>
+            </div>
+
+            <button class="login" style="margin-bottom: 15px;">Log in</button>
+
+            <div class="or" style="text-align: center;">
+                <p><span class="line-left">______________</span>OR<span class="line-right">______________</span></p>
+            </div>
+
+            <div style="text-align: center; padding: 15px 0 0;">
+                <p class="facebook"> <span><i class="fa-brands fa-square-facebook" style="color: #213454;"></i>
+                    </span> Log in with Facebook
+                </p>
+            </div>
+
+            <a style="text-decoration: none; padding: 20px 0;" href="">Forgot password?</a>
+        </div>
+
+
+        <div class="signup">
+            <p class="acc">Don't have an account?
+                <span style="color:  rgb(0, 149, 246);"> Sign up</span>
+            </p>
+        </div>
+        <div class="get">
+            <p>Get the app.</p>
+        </div>
+        <div class="plst">
+            <div class="comp-logo">
+                <img src="../../website/IMAGE/black googleplay.png" width="100%" alt="">
+            </div>
+            <div class="comp-logo2">
+                <img src="../../website/IMAGE/microsorf black.png" width="100%" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+
+        function handlevalidation() {
+            document.getElementById("show").style.display = "block"
+
+        }
+        function show() {
+            let userp = document.getElementById("pass-id")
+
+            if (userp.type === "password") {
+                userp.type = "text"
+                document.getElementById("show").innerText = "hide"
+
+            }
+            else {
+                userp.type = "password";
+                document.getElementById("show").innerText = "show"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
